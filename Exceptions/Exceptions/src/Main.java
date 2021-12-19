@@ -4,21 +4,32 @@ public class Main {
 	public static void main(String[] args) throws Exception{
 
 		
-		try {
-			int[] a = new int[0];
-		
-			
-			int integer = 90;
-			if(integer<8)
-				throw new MyException(integer);
-			System.out.println("  dsfsd     sdfdsf  ".trim());
-			String logline="sdfsd f";
-			System.out.println(a.length);
+
+	        try
+	        {
+	            int a[]= {1, 2, 3, 4};
+	            for (int i = 1; i <= 4; i++)
+	            {
+	                int girdi = keyboard.nextInt();
+	                if(girdi == 3)
+	                	throw new MyException();
+	                else if(girdi==2)
+	                	throw new DerivedMyException();
+	            }
+	        }
+	        catch (DerivedMyException e) {
+				System.out.println(e+" derived exception önce geldi bile.");
 			}
-		finally {
-			System.out.println(8);
-		
-		}
+	        catch (MyException e)
+	        {
+	            System.out.println ("error = " + e);
+	        }
+	        catch (Exception e) {
+				System.out.println();
+			}
+	        finally {
+				System.out.println("Bu kod her kosulda çalışacak!");
+			}
 	
 		
 	}

@@ -4,7 +4,6 @@ public class DerivedMyException extends MyException{
 
 
 	/**
-	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
